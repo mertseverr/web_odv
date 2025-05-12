@@ -1,0 +1,200 @@
+/* Genel Stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigasyon Çubuğu */
+.navigasyon {
+    background-color: #2c3e50;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigasyon .logo {
+    color: #e74c3c;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navigasyon ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigasyon ul li {
+    margin-left: 1.5rem;
+}
+
+.navigasyon ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.navigasyon ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../resimler/kitap.jpg') no-repeat center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #c0392b;
+}
+
+/* İçerik ve Kartlar */
+.icerik {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.kart {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.kart:hover {
+    transform: translateY(-5px);
+}
+
+.kart img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.kart h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.kart p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Form Stilleri (kitap-ekle.html) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .navigasyon {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navigasyon ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .navigasyon ul li {
+        margin-left: 0;
+    }
+
+    .banner h2 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .kart {
+        width: 100%;
+    }
+}
